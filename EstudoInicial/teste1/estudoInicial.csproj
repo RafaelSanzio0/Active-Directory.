@@ -89,8 +89,6 @@
     <Content Include="RedefinirSenha.aspx" />
     <Content Include="RenomearObj.aspx" />
     <Content Include="DU-traduza.aspx" />
-    <Content Include="testeTR.aspx" />
-    <Content Include="TreeView01.aspx" />
     <Content Include="TreeviewExemplo.aspx" />
     <Content Include="Web.config" />
     <Content Include="remover.aspx" />
@@ -251,20 +249,6 @@
     </Compile>
     <Compile Include="DU-traduza.aspx.designer.cs">
       <DependentUpon>DU-traduza.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="testeTR.aspx.cs">
-      <DependentUpon>testeTR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testeTR.aspx.designer.cs">
-      <DependentUpon>testeTR.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TreeView01.aspx.cs">
-      <DependentUpon>TreeView01.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TreeView01.aspx.designer.cs">
-      <DependentUpon>TreeView01.aspx</DependentUpon>
     </Compile>
     <Compile Include="TreeviewExemplo.aspx.cs">
       <DependentUpon>TreeviewExemplo.aspx</DependentUpon>

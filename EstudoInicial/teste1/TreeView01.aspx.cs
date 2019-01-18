@@ -19,8 +19,9 @@ namespace teste1
         }
 
 
-        public void Popular_Treeview(string path)
+        public List<string> Popular_Treeview(string path)
         {
+               
             DirectoryEntry entry = new DirectoryEntry("LDAP://192.168.92.200/" + path, "contoso\\administrator", "Br@sil01");
             DirectorySearcher mySearcher = new DirectorySearcher(entry);
             mySearcher.Filter = ("(objectClass=organizationalUnit)");
@@ -42,7 +43,11 @@ namespace teste1
 
             mySearcher.Dispose();
             entry.Dispose();
+            
         }
+
+
+
 
         protected void T_SelectedNodeChanged(object sender, EventArgs e)
         {
