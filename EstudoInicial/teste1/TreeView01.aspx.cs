@@ -14,20 +14,12 @@ namespace teste1
         {
             if (!IsPostBack) //PostBack = É quando a página tem que ir até o servidor para processar alguma informação e depois retorna a própria página.
             {
-                carregaNode(string.Empty);
+               
             }
         }
 
-        public void carregaNode(string nodepath)
-        {
-            if (nodepath == "")
-            {
-                TreeNode treenode = new TreeNode();
-               // treenode.Text();
-            }
-        }
 
-        public void Show_Treeview(string path)
+        public void Popular_Treeview(string path)
         {
             DirectoryEntry entry = new DirectoryEntry("LDAP://192.168.92.200/" + path, "contoso\\administrator", "Br@sil01");
             DirectorySearcher mySearcher = new DirectorySearcher(entry);
@@ -52,7 +44,7 @@ namespace teste1
             entry.Dispose();
         }
 
-        protected void TR_SelectedNodeChanged(object sender, EventArgs e)
+        protected void T_SelectedNodeChanged(object sender, EventArgs e)
         {
 
             ClientScript.RegisterStartupScript(this.GetType(), "x", "alert('ok');",true); //responsavel para executar
@@ -60,4 +52,6 @@ namespace teste1
 
         }
     }
+       
+    
 }

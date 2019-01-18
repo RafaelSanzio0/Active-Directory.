@@ -10,7 +10,7 @@
 namespace teste1 {
     
     
-    public partial class TreeView01 {
+    public partial class TreeviewExemplo {
         
         /// <summary>
         /// form1 control.

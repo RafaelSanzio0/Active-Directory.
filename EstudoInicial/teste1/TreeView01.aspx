@@ -9,9 +9,10 @@
 <body>
     <form id="form1" runat="server">
     
-      <h3>TreeView Declarative Syntax Example</h3>
+      <h3></h3>
       
-      <asp:TreeView id="TR" runat="server" OnSelectedNodeChanged="TR_SelectedNodeChanged">
+      <asp:TreeView id="arvore" runat="server" OnSelectedNodeChanged="Arvore_SelectedNodeChanged">
+
          
         
         

@@ -10,7 +10,7 @@
 namespace teste1 {
     
     
-    public partial class TreeView01 {
+    public partial class testeTR {
         
         /// <summary>
         /// form1 control.
@@ -22,12 +22,12 @@ namespace teste1 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// arvore control.
+        /// TreeView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView arvore;
+        protected global::System.Web.UI.WebControls.TreeView TreeView1;
     }
 }
