@@ -18,5 +18,6 @@
 
             <asp:Button ID="botao"  runat="server" Text="alterar" OnClick="botao_Click" />
             </div>
+        <div id="result" runat="server"></div>
         </form>
 </html>

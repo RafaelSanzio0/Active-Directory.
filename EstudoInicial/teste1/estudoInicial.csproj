@@ -83,6 +83,8 @@
     <Content Include="EnumerarConf.aspx" />
     <Content Include="EnumerarOU.aspx" />
     <Content Include="EnumerarPro.aspx" />
+    <Content Include="imagens\GRUPO.png" />
+    <Content Include="imagens\USUARIO.png" />
     <Content Include="index.aspx" />
     <Content Include="mover.aspx" />
     <Content Include="ObterPing.aspx" />

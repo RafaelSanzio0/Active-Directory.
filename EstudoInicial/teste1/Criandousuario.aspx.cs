@@ -21,9 +21,10 @@ namespace teste1
             string userName = txt_nome.Text;
             string userPassword = txt_senha.Text;
             CreateUserAccount(ldapPath, userName, userPassword); //chama o metodo passando os valores digitados pelo usuario
+            result.InnerText = "Usuario criado com sucesso";
 
         }
-        //iappath = OU=USERS,OU=LAB2008,OU=CONTOSO,DC=contoso,DC=local
+        //iappath = OU=USERS,OU=PREFEITURA,DC=contoso,DC=local
 
         public string CreateUserAccount(string ldapPath, string userName, string userPassword)
         {

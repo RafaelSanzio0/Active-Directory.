@@ -21,7 +21,8 @@
 
             <asp:Button ID="Button1" runat="server" text="adicionar" OnClick="buttonRemoveUser_Click" />
 
-
+        </div>
+        <div id="result" runat="server">
 
         </div>
     </form>

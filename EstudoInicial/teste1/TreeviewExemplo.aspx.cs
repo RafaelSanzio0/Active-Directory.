@@ -19,8 +19,7 @@ namespace teste1
             if (!IsPostBack)
             {
                 TreeNode node = new TreeNode();
-                //node.Text = "C:\\PastaTeste";
-                //node.Value = "C:\\PastaTeste";
+                node.ImageUrl = "~/imagens/GRUPO.png";
                 node.Text = "CONTOSO";
                 node.Value = "DC=CONTOSO,DC=LOCAL";
                 arvore.Nodes.Add(node);
@@ -31,13 +30,23 @@ namespace teste1
 
         {
             List<string> obj = new List<string>(); //nao precisa de tamanho fixo
+           // List<string> users = new List<string>();
+
 
             DirectoryEntry entry = new DirectoryEntry("LDAP://192.168.92.200/" + path, "contoso\\administrator", "Br@sil01");
       
-            foreach (DirectoryEntry child in entry.Children)
+            foreach (DirectoryEntry child in entry.Children)//cria uma var que vai navegar pelos filhos do AD
             {
-                if(child.SchemaClassName == "organizationalUnit")
+                if(child.SchemaClassName == "organizationalUnit") //seleciona apenas o tipo OU
                 {
+                    obj.Add(child.Path.Split('/')[3]); //seleciona um separador, passando o index do que vc quer retornar
+                   
+                         
+                }
+
+                else if (child.SchemaClassName == "user")
+                {
+
                     obj.Add(child.Path.Split('/')[3]);
                 }
             }
@@ -56,18 +65,34 @@ namespace teste1
                 string[] directories = GetOUs(node.Value);
 
 
-                foreach (string directory in directories)
+                foreach (string directory in directories)//cria uma var que vai percorrer o array listado acima
                 {
                     TreeNode childNote = new TreeNode();
 
-                    childNote.Text = directory.Split('\\')[directory.Split('\\').Length -1];
+                    //childNote.Text = directory.Split('\\')[directory.Split('\\').Length -1];
+                    childNote.Text = directory.Split(',')[0].Split('=')[1];
+
+                    if (directory.StartsWith("OU"))
+                    {
+                        childNote.ImageUrl = "~/imagens/GRUPO.png";
+
+                    }
+                    else if (directory.StartsWith("CN"))
+                    {
+                        childNote.ImageUrl = "~/imagens/USUARIO.png";
+
+                    }
+
                     childNote.Value = directory;
                     node.ChildNodes.Add(childNote);
 
                 }
            
             }
-            catch { }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
         }
 

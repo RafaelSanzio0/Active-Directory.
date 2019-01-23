@@ -20,6 +20,7 @@ namespace teste1
             string userDn = txt_usuario.Text;
             string password = txt_senha.Text;
             ResetPassword(userDn, password);
+            result.InnerText = "Senha alterada com sucesso";
 
         }
         public void ResetPassword(string userDn, string password)
